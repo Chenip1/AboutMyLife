@@ -14,6 +14,7 @@ import {
   Calendar,
   ArrowRight,
 } from 'lucide-react';
+import diaryCover from '@/assets/diary-cover.jpg';
 import { Image } from '@/components/ui/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -43,7 +44,6 @@ const MODULES = [
   { path: '/travel', label: '旅行记录', icon: Map, color: 'from-cyan-200 to-cyan-100', key: 'travel' },
 ];
 
-const HERO_IMG = '/spark/app/app_17hmvqv2ry5/runtime/api/v1/storage/object/bucket_aadk577kbqsow_static/static%2Faadk57uvkaifs_ve_miaoda';
 
 function getGreeting(): string {
   const hour = new Date().getHours();
@@ -186,7 +186,7 @@ export default function HomePage() {
             <div className="relative rounded-3xl overflow-hidden shadow-lg">
               <div className="aspect-[21/9] w-full">
                 <Image
-                  src={HERO_IMG}
+                  src={diaryCover}
                   alt="手账本封面"
                   className="w-full h-full object-cover"
                 />
